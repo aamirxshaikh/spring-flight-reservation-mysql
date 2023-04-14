@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home - FlightBooking</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="index.html">FlightBooking</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="customer.html">Customers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="airlines.html">Airlines</a></li>
+                    <li class="nav-item"><a class="nav-link" href="airports.html">Airports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ticket-booking.html">ticket booking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="flights.html">Flights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="search.html">Search flight</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ticket-cancel.html">ticket cancel</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead" style="background: url(&quot;assets/img/pexels-pixabay-62623.jpg&quot;) center / cover no-repeat;">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto position-relative">
+                    <div class="site-heading">
+                        <h1>Ticket Booking</h1><span class="subheading">Book your tickets</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <section class="register-photo">
+                    <div class="form-container">
+                        <div class="image-holder" style="background: url(&quot;assets/img/pexels-pixabay-62623.jpg&quot;) center / cover no-repeat;"></div>
+                        <form method="post">
+                            <h2 class="text-center">Ticket Booking</h2>
+                            <div class="mb-3"><input class="form-control" type="text" placeholder="Customer Id" name="customer-id" required="" maxlength="16"></div>
+                            <div class="mb-3"><input class="form-control" type="text" placeholder="Departure" name="departure" required="" maxlength="16"></div>
+                            <div class="mb-3"><input class="form-control" type="text" placeholder="From" name="from" required="" maxlength="16"></div>
+                            <div class="mb-3"><input class="form-control" type="text" name="to" placeholder="To" required="" maxlength="16"></div>
+                            <div class="mb-3"><input class="form-control" type="number" name="no-of-passengers" placeholder="Number of Passengers" required=""></div>
+                            <div class="mb-3"><input class="form-control" type="text" name="insurance" placeholder="Insurance (Y/N)" required="" maxlength="1"></div>
+                            <div class="mb-3"><input class="form-control" type="text" name="refundable" placeholder="Refundable (Y/N)" required="" maxlength="1"></div>
+                            <div class="mb-3"><input class="form-control" type="text" name="booking-date" placeholder="Booking Date (YYYY-MM-DD)" required=""></div>
+                            <div class="mb-3"><input class="form-control" type="number" name="total-amount" placeholder="Total Amount" required=""></div>
+                            <div class="mb-3"><input class="form-control" type="number" name="pnr-no" placeholder="PNR Number" required=""></div>
+                            <div class="mb-3"><input class="form-control" type="number" name="bagages" placeholder="Bagages" required=""></div>
+                            <div class="mb-3"></div>
+                            <div class="mb-3"><button class="btn btn-primary d-block w-100" id="submit" type="submit" style="background: rgb(61,89,135);">Book ticket</button><button class="btn btn-danger border rounded d-block w-100 mt-2" type="reset" style="background: var(--bs-red);">Clear</button></div>
+                        </form>
+                    </div>
+                </section>
+                <section>
+                    <h1 class="text-center py-4">Safety Measures</h1>
+                    <div class="card-group">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title"><br><strong>Pack correctly for safety</strong><br><br></h4>
+                                <p class="card-text">In order to guarantee your safety on board, the transport of certain items either in checked baggage or in your carry-on baggage is not permitted. That is why it is important that before your departure you inform yourself thoroughly and pack correctly. Here youâ€™ll find an overview of which dangerous goods may be transported in which item of baggage. You can also find out here which conditions the items have to meet.<br><br></p>
+                            </div>
+                        </div>
+                        <div class="card"><img class="card-img-top w-100 d-block" src="./assets/img/pexels-roger-brown-5149758.jpg">
+                            <div class="card-body">
+                                <h4 class="card-title"><br><strong>Have a first aid kit with the basics, especially pain medication</strong><br><br></h4>
+                                <p class="card-text"><br>Sometimes flights can cause headaches, so have a pack ready just in case this happens to be that one. A few things you may want to pack: Painkillers, Bandages. A sedative (if you are a nervous traveler) Anti-nausea medication, Chewing gum (for air pressure changes), Tissues Earplugs (good for travel in general), Medication for anything you are prone to, such as allergies.<br><br></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></li>
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></li>
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-github fa-stack-1x fa-inverse"></i></span></li>
+                    </ul>
+                    <p class="text-muted copyright">Copyright&nbsp;©&nbsp;FlightBooking 2021</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/js/ticket-booking.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/clean-blog.js"></script>
+</body>
+
+</html>

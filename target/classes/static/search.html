@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Search Flights - FlightBooking</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="index.html">FlightBooking</a><button data-bs-toggle="collapse" data-bs-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="customer.html">Customers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="airlines.html">Airlines</a></li>
+                    <li class="nav-item"><a class="nav-link" href="airports.html">Airports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ticket-booking.html">ticket booking</a></li>
+                    <li class="nav-item"><a class="nav-link" href="flights.html">Flights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="search.html">Search flight</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ticket-cancel.html">ticket cancel</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead" style="background: url(&quot;assets/img/pexels-skitterphoto-63901.jpg&quot;) center / cover no-repeat;">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto position-relative">
+                    <div class="site-heading">
+                        <h1>Search</h1><span class="subheading">Seach flights</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 mx-auto">
+                <section class="register-photo">
+                    <div class="form-container">
+                        <div class="image-holder" style="background: url(&quot;assets/img/pexels-ekky-wicaksono-3760564.jpg&quot;) center / cover no-repeat;"></div>
+                        <form method="post">
+                            <h2 class="text-center">Search Flight</h2>
+                            <div class="mb-3">
+                                <div class="dropdown"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button">Flight</button>
+                                    <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="dropdown"><button class="btn btn-primary dropdown-toggle" aria-expanded="false" data-bs-toggle="dropdown" type="button">Airline</button>
+                                    <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
+                                </div>
+                            </div>
+                            <div class="mb-3"><input class="form-control" type="number" name="total-seats" placeholder="Total Seats" required=""></div>
+                            <div class="mb-3"><input class="form-control" type="text" placeholder="Departure" name="departure" required="" maxlength="16"></div>
+                            <div class="mb-3"><input class="form-control" type="text" placeholder="From" name="from" required="" maxlength="16"></div>
+                            <div class="mb-3"><input class="form-control" type="text" name="to" placeholder="To" required="" maxlength="16"></div>
+                            <div class="mb-3"><input class="form-control" type="number" name="stops" placeholder="Stops" required=""></div>
+                            <div class="mb-3"><input class="form-control" type="text" name="time" placeholder="Time"></div>
+                            <div class="mb-3"></div>
+                            <div class="mb-3"><button class="btn btn-primary d-block w-100" id="submit" type="submit" style="background: rgb(61,89,135);">Search</button><button class="btn btn-danger border rounded d-block w-100 mt-2" type="reset" style="background: var(--bs-red);">Clear</button></div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+            <div class="col">
+                <section class="pt-4">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Flight</th>
+                                    <th>Airline</th>
+                                    <th>Total Seats</th>
+                                    <th>Departure</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Stops</th>
+                                    <th>Time</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cell 1</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td><button class="btn btn-primary btn-sm" type="button">book</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Cell 1</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td><button class="btn btn-primary btn-sm" type="button">book</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Cell 1</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td><button class="btn btn-primary btn-sm" type="button">book</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Cell 1</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td>Cell 2</td>
+                                    <td><button class="btn btn-primary btn-sm" type="button">book</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></li>
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></li>
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-github fa-stack-1x fa-inverse"></i></span></li>
+                    </ul>
+                    <p class="text-muted copyright">Copyright&nbsp;©&nbsp;FlightBooking 2021</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/clean-blog.js"></script>
+</body>
+
+</html>
